@@ -227,6 +227,7 @@ hr.small {
 
 .portfolio-item {
     margin-bottom: 30px;
+    position: relative;
 }
 
 .img-portfolio {
@@ -235,6 +236,13 @@ hr.small {
 
 .img-portfolio:hover {
     opacity: 0.8;
+}
+
+.text-overlay {
+  left: -50%;
+  right: -50%;
+  bottom: 0;
+  position: absolute;
 }
 
 /* Call to Action */
