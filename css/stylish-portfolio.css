@@ -239,6 +239,7 @@ hr.small {
 }
 
 .text-overlay {
+  max-width: 200%;
   left: -50%;
   right: -50%;
   bottom: 5%;
@@ -252,7 +253,13 @@ hr.small {
   -ms-transition: 0.25s;
 }
 
-.img-portfolio:hover + p {
+.text-overlay:hover {
+  visibility: visible;
+  opacity: 1;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.img-portfolio:hover + .text-overlay {
   visibility: visible;
   opacity: 1;
   -webkit-transition: 0.5s;

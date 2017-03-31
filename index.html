@@ -172,16 +172,21 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="#">
+                                <a href="https://tvanmaren-classifieds.herokuapp.com/">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                                    <p class="text-overlay">PiOS Media Server</p>
+                                    <p class="text-overlay">Angular CRUD App</p>
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="#">
+                                <a href="https://fridge-face.herokuapp.com/">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
+                                    <p class="text-overlay">
+                                      jQuery
+                                      <br>
+                                      Inventory Tracking System
+                                    </p>
                                 </a>
                             </div>
                         </div>
@@ -189,19 +194,45 @@
                             <div class="portfolio-item">
                                 <a href="#">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
+                                    <p class="text-overlay">
+                                      Ionic iOS App
+                                    </p>
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="#">
+                                <a href="http://g36.capston.es/van%20maren_tristan/">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
+                                    <p class="text-overlay">
+                                      React Native
+                                      <br>
+                                      iOS App
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="https://mock-me.herokuapp.com/">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-5.jpg">
+                                    <p class="text-overlay">
+                                      IBM Watson Text Analysis
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="https://github.com/tvanmaren/GO_webcrawler">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-6.jpg">
+                                    <p class="text-overlay">GO Web Crawler</p>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
+                    <a href="#!" class="btn btn-dark">View More Items</a>
                 </div>
                 <!-- /.col-lg-10 -->
             </div>
@@ -341,8 +372,13 @@
             // Handle the mouse leave event
             that.on('mouseleave', onMapMouseleaveHandler);
         }
-        // Enable map zooming with mouse scroll when the user clicks the map
+    // Enable map zooming with mouse scroll when the user clicks the map
     $('.map').on('click', onMapClickHandler);
+
+    $('#portfolio > .container > .row > div > a.btn.btn-dark').click((e)=>{
+      e.preventDefault();
+      let emailMe = confirm('Just shoot me a message over LinkedIn or Email, and I\'ll be happy to send you links to my latest work!');
+    });
     </script>
 
 </body>
