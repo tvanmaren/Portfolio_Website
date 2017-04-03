@@ -194,12 +194,27 @@
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item" target="_blank">
-                                <a href="#">
+                                <a href="#" id="in-progress">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
                                     <p class="text-overlay">
                                       Ionic iOS App
                                     </p>
                                 </a>
+                            </div>
+                            <div class="hidden-text"><p>
+                              Sorry--it's complicated. This one got messy. Due to a variety of missteps on the behalf of myself and my galvanize team (Stephen Hanzlick, Kyle Gray, Keegan Ridgley, and myself--all galvanize students), the server-side code got disconnected and reconnected to about three different repositories on github, while we often lost track of which one was which.
+                              To make things worse, we at one point tried to link the client-side code into the same codebase, with mixed and confusing results.
+                            </p>
+                            <p>
+                              So long story short--I'm still working on cleaning up the mess to make the codebase presentable and coherent.
+                            </p>
+                            <p>
+                              For now, you should know that we successfully built a server &amp; client-side Ionic mobile app to stream video files from a Raspberry Pi server over that server's own private network. The server was written in Node, Express, Postgres, and Knex. The client was written in Angular 1.6 (with Ionic components), included token-based authentication (with an http interceptor), user login/signup, and some nifty which-network-am-i-on magic. It allowed the user to (once logged in) browse the database of video files and stream any file directly from the server. That was all we were able to pull together in the one week we had for the project, but when we presented we were perhaps two days away from getting streaming/download options working and expanding its use to all file types. If we'd had one more full week, we could have had a fully integrated file-sharing server with streaming capability, file ownership, upload/download functionality, and a rating system.
+                            </p>
+                            <p>
+                              Personally, I got my first taste of mobile applications, learned how Ionic works, wrote my first factories and services for Angular, got to struggle with Cordova issues, and learned a lot about how git issues (not to mention networking issues with the raspberry Pi and testing/emulation issues with the emulated vs deployed application) can drain time away from an otherwise productive team.
+                              Knowing what we know now, we probably would have planned how we wanted to have things deployed to github in advance, researched how to pipe graphics over from a raspberry pi to a MacBook before we started editing server code, and built at least a few basic tests to simulate a server (so we could write client-side code without having to constantly manually test it against a running, functional server--which made adjusting the server a total pain).
+                            </p>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -383,7 +398,18 @@
     $('#portfolio > .container > .row > div > a.btn.btn-dark').click((e)=>{
       e.preventDefault();
       let emailMe = confirm('Just shoot me a message over LinkedIn or Email, and I\'ll be happy to send you links to my latest work!');
+      console.log(`Your understanding of why you're here is... ${emailMe}`);
     });
+
+    $('.portfolio-item > #in-progress').click((e) => {
+      e.preventDefault();
+      const $hiddenText=$('.portfolio-item + div.hidden-text');
+      if ($hiddenText.css('visibility')==='hidden') {
+        $hiddenText.css({'height': 'auto', 'width': 'auto', 'visibility': 'visible', 'opacity': '1'});
+      } else {
+        $hiddenText.css({'height': '0', 'width': '0', 'visibility': 'hidden', 'opacity': '0'});
+      }
+    })
     </script>
 
 </body>
