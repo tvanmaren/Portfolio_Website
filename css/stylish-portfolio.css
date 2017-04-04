@@ -6,8 +6,7 @@
 
 /* Global Styles */
 
-html,
-body {
+html, body {
     width: 100%;
     height: 100%;
 }
@@ -128,7 +127,8 @@ hr.small {
     color: #999;
 }
 
-.sidebar-nav li a:hover {
+.sidebar-nav li a:hover,
+.sidebar-nav li a:focus {
     text-decoration: none;
     color: #fff;
     background: rgba(255,255,255,0.2);
@@ -149,7 +149,8 @@ hr.small {
     color: #999;
 }
 
-.sidebar-nav > .sidebar-brand a:hover {
+.sidebar-nav > .sidebar-brand a:hover,
+.sidebar-nav > .sidebar-brand a:focus {
     color: #fff;
     background: none;
 }
@@ -179,7 +180,7 @@ hr.small {
 
 .header {
     display: table;
-    position: relative;
+    position: static;
     width: 100%;
     height: 100%;
     background: url(../img/bg.jpg) no-repeat center center scroll;
@@ -234,7 +235,8 @@ hr.small {
     margin: 0 auto;
 }
 
-.img-portfolio:hover {
+.img-portfolio:hover,
+.img-portfolio:focus {
     opacity: 0.8;
 }
 
@@ -253,13 +255,15 @@ hr.small {
   -ms-transition: 0.25s;
 }
 
-.text-overlay:hover {
+.text-overlay:hover,
+.text-overlay:focus {
   visibility: visible;
   opacity: 1;
   text-shadow: 1px 1px 1px #000;
 }
 
-.img-portfolio:hover + .text-overlay {
+.img-portfolio:hover + .text-overlay,
+.img-portfolio:focus + .text-overlay {
   visibility: visible;
   opacity: 1;
   -webkit-transition: 0.5s;
@@ -269,8 +273,7 @@ hr.small {
 }
 
 .hidden-text {
-  visibility: hidden;
-  opacity: 0;
+  display: none;
   height: 0;
   width: 0;
 }
@@ -289,6 +292,7 @@ hr.small {
 
 .map {
     height: 500px;
+    overflow: hidden;
 }
 
 @media(max-width:768px) {
