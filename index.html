@@ -401,8 +401,9 @@
         const currentClass = $(e.target).attr('class').split(' ').filter((classAttr) => {
           return !(classAttr == 'btn' || classAttr == 'btn-default');
         })[0];
-        $('filter-options span').removeClass('active');
+        $('#filter-options span').removeClass('active');
         $(e.target).parent().addClass('active');
+
         if (currentClass === 'all') {
           $('#portfolio-items').children('div.item').fadeIn("fast");
         } else {
