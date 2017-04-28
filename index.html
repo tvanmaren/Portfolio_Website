@@ -38,22 +38,22 @@
       <ul class="sidebar-nav">
         <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
         <li class="sidebar-brand">
-          <a href="#top" onclick=$("#menu-close").click();>Tristan Van Maren</a>
+          <a href="#top" onclick=$( "#menu-close").click();>Tristan Van Maren</a>
         </li>
         <li>
-          <a href="#top" onclick=$("#menu-close").click();>Home</a>
+          <a href="#top" onclick=$( "#menu-close").click();>Home</a>
         </li>
         <li>
-          <a href="#about" onclick=$("#menu-close").click();>About</a>
+          <a href="#about" onclick=$( "#menu-close").click();>About</a>
         </li>
         <li>
-          <a href="#services" onclick=$("#menu-close").click();>Services</a>
+          <a href="#services" onclick=$( "#menu-close").click();>Services</a>
         </li>
         <li>
-          <a href="#portfolio" onclick=$("#menu-close").click();>Portfolio</a>
+          <a href="#portfolio" onclick=$( "#menu-close").click();>Portfolio</a>
         </li>
         <li>
-          <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
+          <a href="#contact" onclick=$( "#menu-close").click();>Contact</a>
         </li>
       </ul>
     </nav>
@@ -85,7 +85,6 @@
     </section>
 
     <!-- Services -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
     <section id="services" class="services bg-dark">
       <div class="container">
         <div class="row text-center">
@@ -100,8 +99,8 @@
                                 <i class="fa fa-lightbulb-o fa-stack-1x text-primary"></i>
                             </span>
                   <h3>
-                                    <strong>Javascript</strong>
-                                </h3>
+                    <strong>Javascript</strong>
+                  </h3>
                   <p>DOM manipulation, API integration, and AJAX with a modular and balanced blend of Functional and Object-Oriented Design under the hood. JQuery optional.</p>
                   <a href="https://andrewrabon.com/choosing-vanilla-javascript-in-2016-6f38a8302ee5" class="btn btn-light">Why Vanilla JS?</a>
                 </div>
@@ -113,8 +112,8 @@
                                 <i class="fa fa-share-alt fa-stack-1x text-primary"></i>
                             </span>
                   <h3>
-                                    <strong>Node</strong>
-                                </h3>
+                    <strong>Node</strong>
+                  </h3>
                   <p>Server setup in minutes with standard Express &amp; Express Router integration. RESTful best practices regarded, but not required. Backends optimized for speed.</p>
                   <a href="https://medium.com/@schneidenbach/restful-api-best-practices-and-common-pitfalls-7a83ba3763b5" class="btn btn-light">Info on REST</a>
                 </div>
@@ -122,12 +121,12 @@
               <div class="col-md-3 col-sm-6">
                 <div class="service-item">
                   <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-sitemap fa-stack-1x text-primary"></i>
-                            </span>
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-sitemap fa-stack-1x text-primary"></i>
+                  </span>
                   <h3>
-                                    <strong>AngularJS / React</strong>
-                                </h3>
+                    <strong>AngularJS / React</strong>
+                  </h3>
                   <p>The power of Single Page Applications made easy with either of the most popular JS frameworks! Other frameworks suit your needs better? I'd love to learn them!</p>
                   <a href="https://www.pluralsight.com/guides/front-end-javascript/angular-vs-react-a-side-by-side-comparison" class="btn btn-light">React vs AngularJS</a>
                 </div>
@@ -135,12 +134,12 @@
               <div class="col-md-3 col-sm-6">
                 <div class="service-item">
                   <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-database fa-stack-1x text-primary"></i>
-                            </span>
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-database fa-stack-1x text-primary"></i>
+                  </span>
                   <h3>
-                                    <strong>Postgres / MySQL</strong>
-                                </h3>
+                    <strong>Postgres / MySQL</strong>
+                  </h3>
                   <p>A Relational Database to fit your storage needs. Designed with equal parts extensibility and efficiency. Best practices that work for you! (Knex.js integration preferred)</p>
                   <a href="https://www.tutorialcup.com/dbms/normalization-denormalization.htm" class="btn btn-light">Normalization Details</a>
                 </div>
@@ -158,8 +157,11 @@
     <!-- Callout -->
     <aside class="callout">
       <div class="text-vertical-center">
-        <h1>"Talk is cheap. Show me the code."<br>
-              - Linus Torvalds</h1>
+        <h1>
+          "Talk is cheap. Show me the code."
+          <br>
+          - Linus Torvalds
+        </h1>
       </div>
     </aside>
 
@@ -171,87 +173,109 @@
             <h2>My Work</h2>
             <hr class="small">
             <div class="row">
+              <p>These projects are from my time at Galvanize's 6-month, Full-Stack Web Development Immersive course in Boulder, Colorado from October 2016 to March 2017. My work since then has been ongoing development of a React Native mobile application in a private repository held by Property Primate, LLC.</p>
+            </div>
+            <div class="row">
               <div class="col-md-6">
-                <div class="portfolio-item">
-                  <a href="https://tvanmaren-classifieds.herokuapp.com/" target="_blank">
-                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                    <p class="text-overlay">Angular CRUD App</p>
-                  </a>
+                <div class="portfolio-cat">
+                  <h3>Full Stack Web Apps</h3>
+                  <div class="portfolio-item2">
+                    <h3>AngularJS CRUD app</h3>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <div class="portfolio-item">
-                  <a href="https://fridge-face.herokuapp.com/" target="_blank">
-                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                    <p class="text-overlay">
-                      jQuery
-                      <br> Inventory Tracking System
-                    </p>
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="portfolio-item" target="_blank">
-                  <a href="#" id="in-progress">
-                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                    <p class="text-overlay">
-                      Ionic iOS App
-                    </p>
-                  </a>
-                </div>
-                <div class="hidden-text">
-                  <p>
-                    Sorry--it's complicated. This one got messy. Due to a variety of missteps on the behalf of myself and my galvanize team (Stephen Hanzlick, Kyle Gray, Keegan Ridgley, and myself--all galvanize students), the server-side code got disconnected and reconnected to about three different repositories on github, while we often lost track of which one was which. To make things worse, we at one point tried to link the client-side code into the same codebase, with mixed and confusing results.
-                  </p>
-                  <p>
-                    So long story short--I'm still working on cleaning up the mess to make the codebase presentable and coherent.
-                  </p>
-                  <p>
-                    For now, you should know that we successfully built a server &amp; client-side Ionic mobile app to stream video files from a Raspberry Pi server over that server's own private network. The server was written in Node, Express, Postgres, and Knex. The client was written in Angular 1.6 (with Ionic components), included token-based authentication (with an http interceptor), user login/signup, and some nifty which-network-am-i-on magic. It allowed the user to (once logged in) browse the database of video files and stream any file directly from the server. That was all we were able to pull together in the one week we had for the project, but when we presented we were perhaps two days away from getting streaming/download options working and expanding its use to all file types. If we'd had one more full week, we could have had a fully integrated file-sharing server with streaming capability, file ownership, upload/download functionality, and a rating system.
-                  </p>
-                  <p>
-                    Personally, I got my first taste of mobile applications, learned how Ionic works, wrote my first factories and services for Angular, got to struggle with Cordova issues, and learned a lot about how git issues (not to mention networking issues with the raspberry Pi and testing/emulation issues with the emulated vs deployed application) can drain time away from an otherwise productive team. Knowing what we know now, we probably would have planned how we wanted to have things deployed to github in advance, researched how to pipe graphics over from a raspberry pi to a MacBook before we started editing server code, and built at least a few basic tests to simulate a server (so we could write client-side code without having to constantly manually test it against a running, functional server--which made adjusting the server a total pain).
-                  </p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="portfolio-item">
-                  <a href="http://g36.capston.es/van%20maren_tristan/" target="_blank">
-                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                    <p class="text-overlay">
-                      React Native
-                      <br> iOS App
-                    </p>
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="portfolio-item">
-                  <a href="https://mock-me.herokuapp.com/" target="_blank">
-                    <img class="img-portfolio img-responsive" src="img/portfolio-5.jpg">
-                    <p class="text-overlay">
-                      IBM Watson Text Analysis
-                    </p>
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="portfolio-item">
-                  <a href="https://github.com/tvanmaren/GO_webcrawler" target="_blank">
-                    <img class="img-portfolio img-responsive" src="img/portfolio-6.jpg">
-                    <p class="text-overlay">GO Web Crawler</p>
-                  </a>
-                </div>
+                  <div class="portfolio-item2">
+                    <h3>jQuery Inventory Tracking System</h3>
+                  </div>
+                  <div class="portfolio-item2">
+                    <h3>IBM Watson Text Analyzer</h3>
+                  </div>
+                  <div class="portfolio-item2">
+                    <h3>GO Web Crawler</h3>
+                  </div>
               </div>
             </div>
-            <!-- /.row (nested) -->
-            <a href="#" class="btn btn-dark">View More Items</a>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="portfolio-item">
+                    <a href="https://tvanmaren-classifieds.herokuapp.com/" target="_blank">
+                      <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+                      <p class="text-overlay">Angular CRUD App</p>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="portfolio-item">
+                    <a href="https://fridge-face.herokuapp.com/" target="_blank">
+                      <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
+                      <p class="text-overlay">
+                        jQuery
+                        <br> Inventory Tracking System
+                      </p>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="portfolio-item" target="_blank">
+                    <a href="#" id="in-progress">
+                      <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
+                      <p class="text-overlay">
+                        Ionic iOS App
+                      </p>
+                    </a>
+                  </div>
+                  <div class="hidden-text">
+                    <p>
+                      Sorry--it's complicated. This one got messy. Due to a variety of missteps on the behalf of myself and my galvanize team (Stephen Hanzlick, Kyle Gray, Keegan Ridgley, and myself--all galvanize students), the server-side code got disconnected and reconnected to about three different repositories on github, while we often lost track of which one was which. To make things worse, we at one point tried to link the client-side code into the same codebase, with mixed and confusing results.
+                    </p>
+                    <p>
+                      So long story short--I'm still working on cleaning up the mess to make the codebase presentable and coherent.
+                    </p>
+                    <p>
+                      For now, you should know that we successfully built a server &amp; client-side Ionic mobile app to stream video files from a Raspberry Pi server over that server's own private network. The server was written in Node, Express, Postgres, and Knex. The client was written in Angular 1.6 (with Ionic components), included token-based authentication (with an http interceptor), user login/signup, and some nifty which-network-am-i-on magic. It allowed the user to (once logged in) browse the database of video files and stream any file directly from the server. That was all we were able to pull together in the one week we had for the project, but when we presented we were perhaps two days away from getting streaming/download options working and expanding its use to all file types. If we'd had one more full week, we could have had a fully integrated file-sharing server with streaming capability, file ownership, upload/download functionality, and a rating system.
+                    </p>
+                    <p>
+                      Personally, I got my first taste of mobile applications, learned how Ionic works, wrote my first factories and services for Angular, got to struggle with Cordova issues, and learned a lot about how git issues (not to mention networking issues with the raspberry Pi and testing/emulation issues with the emulated vs deployed application) can drain time away from an otherwise productive team. Knowing what we know now, we probably would have planned how we wanted to have things deployed to github in advance, researched how to pipe graphics over from a raspberry pi to a MacBook before we started editing server code, and built at least a few basic tests to simulate a server (so we could write client-side code without having to constantly manually test it against a running, functional server--which made adjusting the server a total pain).
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="portfolio-item">
+                    <a href="http://g36.capston.es/van%20maren_tristan/" target="_blank">
+                      <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
+                      <p class="text-overlay">
+                        React Native
+                        <br> iOS App
+                      </p>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="portfolio-item">
+                    <a href="https://mock-me.herokuapp.com/" target="_blank">
+                      <img class="img-portfolio img-responsive" src="img/portfolio-5.jpg">
+                      <p class="text-overlay">
+                        IBM Watson Text Analysis
+                      </p>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="portfolio-item">
+                    <a href="https://github.com/tvanmaren/GO_webcrawler" target="_blank">
+                      <img class="img-portfolio img-responsive" src="img/portfolio-6.jpg">
+                      <p class="text-overlay">GO Web Crawler</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- /.row (nested) -->
+              <a href="#" class="btn btn-dark">View More Items</a>
+            </div>
+            <!-- /.col-lg-10 -->
           </div>
-          <!-- /.col-lg-10 -->
+          <!-- /.row -->
         </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container -->
+        <!-- /.container -->
     </section>
 
     <!-- Call to Action -->
@@ -415,4 +439,5 @@
     </script>
 
   </body>
+
 </html>
