@@ -228,6 +228,10 @@ hr.small {
   padding: 50px 0;
 }
 
+#filter-options {
+  margin: 10px;
+}
+
 #filter-options span>a {
   font-size: 1.5em;
 }
@@ -237,7 +241,7 @@ hr.small {
   background-color: lightgrey;
 }
 
-.portfolio-item {
+#portfolio-items .item {
   margin-bottom: 30px;
   position: relative;
 }
@@ -256,7 +260,7 @@ hr.small {
   right: -50%;
   bottom: 5%;
   position: absolute;
-  font-size: 3em;
+  font-size: 2em;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: 0.25s;
