@@ -38,22 +38,22 @@
       <ul class="sidebar-nav">
         <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
         <li class="sidebar-brand">
-          <a href="#top" onclick=$( "#menu-close").click();>Tristan Van Maren</a>
+          <a href="#top" onclick="$('#menu-close').click();">Tristan Van Maren</a>
         </li>
         <li>
-          <a href="#top" onclick=$( "#menu-close").click();>Home</a>
+          <a href="#top" onclick="$('#menu-close').click();">Home</a>
         </li>
         <li>
-          <a href="#about" onclick=$( "#menu-close").click();>About</a>
+          <a href="#about" onclick="$('#menu-close').click();">About</a>
         </li>
         <li>
-          <a href="#services" onclick=$( "#menu-close").click();>Services</a>
+          <a href="#services" onclick="$('#menu-close').click();">Services</a>
         </li>
         <li>
-          <a href="#portfolio" onclick=$( "#menu-close").click();>Portfolio</a>
+          <a href="#portfolio" onclick="$('#menu-close').click();">Portfolio</a>
         </li>
         <li>
-          <a href="#contact" onclick=$( "#menu-close").click();>Contact</a>
+          <a href="#contact" onclick="$('#menu-close').click();">Contact</a>
         </li>
       </ul>
     </nav>
@@ -189,66 +189,135 @@
                 </span>
               </div>
             </div>
-            <div class="row" id="portfolio-items">
-              <div class="col-md-4 item web">
-                <a href="https://tvanmaren-classifieds.herokuapp.com/" target="_blank">
-                  <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                  <p class="text-overlay">Angular CRUD App</p>
-                </a>
-              </div>
-              <div class="col-md-4 item web">
-                <a href="https://fridge-face.herokuapp.com/" target="_blank">
-                  <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                  <p class="text-overlay">
-                    jQuery
-                    <br> Inventory Tracking System
-                  </p>
-                </a>
-              </div>
-              <div class="col-md-4 item web">
-                <a href="https://mock-me.herokuapp.com/" target="_blank">
-                  <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                  <p class="text-overlay">
-                    IBM Watson Text Analysis
-                  </p>
-                </a>
-              </div>
-              <div class="col-md-4 item misc">
-                <a href="https://github.com/tvanmaren/GO_webcrawler" target="_blank">
-                  <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                  <p class="text-overlay">GO Web Crawler</p>
-                </a>
-              </div>
-              <div class="col-md-4 item mobile">
-                <a href="http://g36.capston.es/van%20maren_tristan/" target="_blank">
-                  <img class="img-portfolio img-responsive" src="img/portfolio-5.jpg">
-                  <p class="text-overlay">
-                    React Native
-                    <br> iOS App
-                  </p>
-                </a>
-              </div>
-              <div class="col-md-4 item mobile" target="_blank">
-                <a href="#" id="in-progress">
-                  <img class="img-portfolio img-responsive" src="img/portfolio-6.jpg">
-                  <p class="text-overlay">
-                    Ionic iOS App
-                  </p>
-                </a>
-              </div>
-              <div class="hidden-text">
-                <p>
-                  Sorry--it's complicated. This one got messy. Due to a variety of missteps on the behalf of myself and my galvanize team (Stephen Hanzlick, Kyle Gray, Keegan Ridgley, and myself--all galvanize students), the server-side code got disconnected and reconnected to about three different repositories on github, while we often lost track of which one was which. To make things worse, we at one point tried to link the client-side code into the same codebase, with mixed and confusing results.
-                </p>
-                <p>
-                  So long story short--I'm still working on cleaning up the mess to make the codebase presentable and coherent.
-                </p>
-                <p>
-                  For now, you should know that we successfully built a server &amp; client-side Ionic mobile app to stream video files from a Raspberry Pi server over that server's own private network. The server was written in Node, Express, Postgres, and Knex. The client was written in Angular 1.6 (with Ionic components), included token-based authentication (with an http interceptor), user login/signup, and some nifty which-network-am-i-on magic. It allowed the user to (once logged in) browse the database of video files and stream any file directly from the server. That was all we were able to pull together in the one week we had for the project, but when we presented we were perhaps two days away from getting streaming/download options working and expanding its use to all file types. If we'd had one more full week, we could have had a fully integrated file-sharing server with streaming capability, file ownership, upload/download functionality, and a rating system.
-                </p>
-                <p>
-                  Personally, I got my first taste of mobile applications, learned how Ionic works, wrote my first factories and services for Angular, got to struggle with Cordova issues, and learned a lot about how git issues (not to mention networking issues with the raspberry Pi and testing/emulation issues with the emulated vs deployed application) can drain time away from an otherwise productive team. Knowing what we know now, we probably would have planned how we wanted to have things deployed to github in advance, researched how to pipe graphics over from a raspberry pi to a MacBook before we started editing server code, and built at least a few basic tests to simulate a server (so we could write client-side code without having to constantly manually test it against a running, functional server--which made adjusting the server a total pain).
-                </p>
+            <div class="row">
+              <div class="panel-group" id="portfolio-items" aria-multiselectable="true">
+                <div class="col-md-4 item web">
+                  <div class="panel panel-default">
+                    <a role="button" data-toggle="collapse" data-parent="#portfolio-items" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+                      <p class="text-overlay">Galvanize Classifieds</p>
+                    </a>
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="panel-body">
+                        <div class="title-text">Galvanize Classifieds</div>
+                        <ul class="text-left project-details">
+                          <li><span class="project-category">Type:</span>
+                            AngularJS CRUD app</li>
+                          <li><span class="project-category">Collaborators:</span>
+                            None</li>
+                          <li><span class="project-category">Timeframe:</span>
+                            2 days</li>
+                          <u>Front-End:</u>
+                          <ul>
+                            <li>AngularJS 1.6</li>
+                            <li>AngularUI Router</li>
+                            <li>PureCSS</li>
+                            <li>AJAX</li>
+                          </ul>
+                          <u>Back-End:</u>
+                          <ul>
+                            <li>Node</li>
+                            <li>Express</li>
+                            <li>PostgreSQL</li>
+                            <li>Knex</li>
+                            <li>Heroku</li>
+                          </ul>
+                          <u>Description:</u><br>
+                          <br>
+                        <a href="https://github.com/tvanmaren/Galvanize_Classified_3" target="_blank"><i class="fa fa-github fa-fw fa-2x"></i></a>
+                        <a href="https://tvanmaren-classifieds.herokuapp.com/" target="_blank"><i class="fa fa-link fa-fw fa-2x"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 item web">
+                  <div class="panel panel-default">
+                    <a role="button" data-toggle="collapse" data-parent="#portfolio-items" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="headingTwo">
+                      <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
+                      <p class="text-overlay">Fridge Face</p>
+                    </a>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <a href="https://fridge-face.herokuapp.com/" target="_blank"></a>
+                        jQuery
+                        <br> Inventory Tracking System
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 item web">
+                  <div class="panel panel-default">
+                    <a role="button" data-toggle="collapse" data-parent="#portfolio-items" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="headingThree">
+                      <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
+                      <p class="text-overlay">Mock Me</p>
+                    </a>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <a href="https://mock-me.herokuapp.com/" target="_blank"></a>
+                        IBM Watson Text Analysis
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 item misc">
+                  <div class="panel panel-default">
+                    <a role="button" data-toggle="collapse" data-parent="#portfolio-items" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour" id="headingFour">
+                      <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
+                      <p class="text-overlay">GO Crawl</p>
+                    </a>
+                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <a href="https://github.com/tvanmaren/GO_webcrawler" target="_blank"></a>
+                        Go Web Crawler
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 item mobile">
+                  <div class="panel panel-default">
+                    <a role="button" data-toggle="collapse" data-parent="#portfolio-items" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive" id="headingFive">
+                      <img class="img-portfolio img-responsive" src="img/portfolio-5.jpg">
+                      <p class="text-overlay">Property Primate</p>
+                    </a>
+                    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <a href="http://g36.capston.es/van%20maren_tristan/" target="_blank"></a>
+                        React Native
+                        <br> iOS App
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 item mobile" target="_blank">
+                  <div class="panel panel-default">
+                    <a role="button" data-toggle="collapse" data-parent="#portfolio-items" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix" id="headingSix">
+                      <img class="img-portfolio img-responsive" src="img/portfolio-6.jpg">
+                      <p class="text-overlay">PiOS Media</p>
+                    </a>
+                    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                      <div class="panel-body">
+                        <p>
+                          Sorry--it's complicated. This one got messy. Due to a variety of missteps on the behalf of myself and my galvanize team (Stephen Hanzlick, Kyle Gray, Keegan Ridgley, and myself--all galvanize students), the server-side code got disconnected and reconnected to about three different repositories on github, while we often lost track of which one was which. To make things worse, we at one point tried to link the client-side code into the same codebase, with mixed and confusing results.
+                        </p>
+                        <p>
+                          So long story short--I'm still working on cleaning up the mess to make the codebase presentable and coherent.
+                        </p>
+                        <p>
+                          For now, you should know that we successfully built a server &amp; client-side Ionic mobile app to stream video files from a Raspberry Pi server over that server's own private network. The server was written in Node, Express, Postgres, and Knex. The client was written in Angular 1.6 (with Ionic components), included token-based authentication (with an http interceptor), user login/signup, and some nifty which-network-am-i-on magic. It allowed the user to (once logged in) browse the database of video files and stream any file directly from the server. That was all we were able to pull together in the one week we had for the project, but when we presented we were perhaps two days away from getting streaming/download options working and expanding its use to all file types. If we'd had one more full week, we could have had a fully integrated file-sharing server with streaming capability, file ownership, upload/download functionality, and a rating system.
+                        </p>
+                        <p>
+                          Personally, I got my first taste of mobile applications, learned how Ionic works, wrote my first factories and services for Angular, got to struggle with Cordova issues, and learned a lot about how git issues (not to mention networking issues with the raspberry Pi and testing/emulation issues with the emulated vs deployed application) can drain time away from an otherwise productive team. Knowing what we know now, we probably would have planned how we wanted to have things deployed to github in advance, researched how to pipe graphics over from a raspberry pi to a MacBook before we started editing server code, and built at least a few basic tests to simulate a server (so we could write client-side code without having to constantly manually test it against a running, functional server--which made adjusting the server a total pain).
+                        </p>
+                        <a href="#" id="in-progress"></a>
+                        Ionic iOS App
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <!-- /.row (nested) -->
@@ -324,120 +393,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Custom Theme JavaScript -->
-    <script defer>
-      // Closes the sidebar menu
-      $("#menu-close").click(function (e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-      });
-      // Opens the sidebar menu
-      $("#menu-toggle").click(function (e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-      });
-      // Scrolls to the selected menu item on the page
-      $(function () {
-        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function () {
-          if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-              $('html,body').animate({
-                scrollTop: target.offset().top
-              }, 1000);
-              return false;
-            }
-          }
-        });
-      });
-      //#to-top button appears after scrolling
-      var fixed = false;
-      $(document).scroll(function () {
-        if ($(this).scrollTop() > 250) {
-          if (!fixed) {
-            fixed = true;
-            // $('#to-top').css({position:'fixed', display:'block'});
-            $('#to-top').show("slow", function () {
-              $('#to-top').css({
-                position: 'fixed',
-                display: 'block'
-              });
-            });
-          }
-        } else {
-          if (fixed) {
-            fixed = false;
-            $('#to-top').hide("slow", function () {
-              $('#to-top').css({
-                display: 'none'
-              });
-            });
-          }
-        }
-      });
-      // Disable Google Maps scrolling
-      // See http://stackoverflow.com/a/25904582/1607849
-      // Disable scroll zooming and bind back the click event
-      var onMapMouseleaveHandler = function (event) {
-        var that = $(this);
-        that.on('click', onMapClickHandler);
-        that.off('mouseleave', onMapMouseleaveHandler);
-        that.find('iframe').css("pointer-events", "none");
-      }
-      var onMapClickHandler = function (event) {
-        var that = $(this);
-        // Disable the click handler until the user leaves the map area
-        that.off('click', onMapClickHandler);
-        // Enable scrolling zoom
-        that.find('iframe').css("pointer-events", "auto");
-        // Handle the mouse leave event
-        that.on('mouseleave', onMapMouseleaveHandler);
-      }
-      // Enable map zooming with mouse scroll when the user clicks the map
-      $('.map').on('click', onMapClickHandler);
-      // Filter functionality
-      $('#filter-options span a').click((e) => {
-        e.preventDefault();
-        const currentClass = $(e.target).attr('class').split(' ').filter((classAttr) => {
-          return !(classAttr == 'btn' || classAttr == 'btn-default');
-        })[0];
-        $('#filter-options span').removeClass('active');
-        $(e.target).parent().addClass('active');
-
-        if (currentClass === 'all') {
-          $('#portfolio-items').children('div.item').fadeIn("fast");
-        } else {
-          $('#portfolio-items').children(`div.${currentClass}`).fadeIn('slow', ()=>{
-            $('#portfolio-items').children(`div:not(.${currentClass})`).fadeOut("slow");
-          });
-        }
-      });
-      // Email popup on portfolio details
-      $('#portfolio > .container > .row > div > a.btn.btn-dark').click((e) => {
-        e.preventDefault();
-        let emailMe = confirm('Just shoot me a message over LinkedIn or Email, and I\'ll be happy to send you links to my latest work! tristan@vanmaren.us');
-        console.log(`Your understanding of why you're here is... ${emailMe}`);
-      });
-      // Hidden text functionality
-      $('.portfolio-item > #in-progress').click((e) => {
-        e.preventDefault();
-        const $hiddenText = $('.portfolio-item + div.hidden-text');
-        if ($hiddenText.css('display') === 'none') {
-          $hiddenText.css({
-            'display': 'inline-block',
-            'height': 'auto',
-            'width': 'auto'
-          });
-        } else {
-          $hiddenText.css({
-            'display': 'none',
-            'height': '0',
-            'width': '0'
-          });
-        }
-      });
-    </script>
-
+    <script src="js/stylish-portfolio.js" defer></script>
   </body>
 
 </html>
