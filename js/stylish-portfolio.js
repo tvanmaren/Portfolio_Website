@@ -1,4 +1,7 @@
 'use strict';
+// enable tooltips
+$($('[data-toggle="tooltip"]').tooltip());
+
 // Closes the sidebar menu
 $("#menu-close").click(function (e) {
   e.preventDefault();
