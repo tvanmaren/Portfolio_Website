@@ -89,27 +89,143 @@ $('#filter-options span a').click((e) => {
     });
   }
 });
-// Email popup on portfolio details
-$('#portfolio > .container > .row > div > a.btn.btn-dark').click((e) => {
+// Email form toggle
+$('#email-toggle').click((e) => {
   e.preventDefault();
-  let emailMe = confirm('Just shoot me a message over LinkedIn or Email, and I\'ll be happy to send you links to my latest work! tristan@vanmaren.us');
-  console.log(`Your understanding of why you're here is... ${emailMe}`);
-});
-// Hidden text functionality
-$('.portfolio-item > #in-progress').click((e) => {
-  e.preventDefault();
-  const $hiddenText = $('.portfolio-item + div.hidden-text');
-  if ($hiddenText.css('display') === 'none') {
-    $hiddenText.css({
+  const $hiddenForm = $('#email-form');
+  if ($hiddenForm.css('display') === 'none') {
+    $hiddenForm.css({
       'display': 'inline-block',
       'height': 'auto',
       'width': 'auto'
     });
   } else {
-    $hiddenText.css({
+    $hiddenForm.css({
       'display': 'none',
       'height': '0',
       'width': '0'
     });
   }
 });
+// Email form functionality
+$('#contact_form').bootstrapValidator({
+    // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+    feedbackIcons: {
+      valid: 'glyphicon glyphicon-ok',
+      invalid: 'glyphicon glyphicon-remove',
+      validating: 'glyphicon glyphicon-refresh'
+    },
+    fields: {
+      first_name: {
+        validators: {
+          stringLength: {
+            min: 2,
+          },
+          notEmpty: {
+            message: 'Please supply your first name'
+          }
+        }
+      },
+      last_name: {
+        validators: {
+          stringLength: {
+            min: 2,
+          },
+          notEmpty: {
+            message: 'Please supply your last name'
+          }
+        }
+      },
+      email: {
+        validators: {
+          notEmpty: {
+            message: 'Please supply your email address'
+          },
+          emailAddress: {
+            message: 'Please supply a valid email address'
+          }
+        }
+      },
+      phone: {
+        validators: {
+          notEmpty: {
+            message: 'Please supply your phone number'
+          },
+          phone: {
+            country: 'US',
+            message: 'Please supply a vaild phone number with area code'
+          }
+        }
+      },
+      address: {
+        validators: {
+          stringLength: {
+            min: 8,
+          },
+          notEmpty: {
+            message: 'Please supply your street address'
+          }
+        }
+      },
+      city: {
+        validators: {
+          stringLength: {
+            min: 4,
+          },
+          notEmpty: {
+            message: 'Please supply your city'
+          }
+        }
+      },
+      state: {
+        validators: {
+          notEmpty: {
+            message: 'Please select your state'
+          }
+        }
+      },
+      zip: {
+        validators: {
+          notEmpty: {
+            message: 'Please supply your zip code'
+          },
+          zipCode: {
+            country: 'US',
+            message: 'Please supply a vaild zip code'
+          }
+        }
+      },
+      comment: {
+        validators: {
+          stringLength: {
+            min: 10,
+            max: 200,
+            message: 'Please enter at least 10 characters and no more than 200'
+          },
+          notEmpty: {
+            message: 'Please supply a description of your project'
+          }
+        }
+      }
+    }
+  })
+  .on('success.form.bv', function (e) {
+    $('#success_message').slideDown({
+      opacity: "show"
+    }, "slow") // Do something ...
+    $('#contact_form').data('bootstrapValidator').resetForm();
+
+    // Prevent form submission
+    e.preventDefault();
+
+    // Get the form instance
+    var $form = $(e.target);
+
+    // Get the BootstrapValidator instance
+    var bv = $form.data('bootstrapValidator');
+
+    // Use Ajax to submit form data
+    $.post($form.attr('action'), $form.serialize(), function (result) {
+      console.log(result);
+    }, 'json');
+  });

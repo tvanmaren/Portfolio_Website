@@ -314,7 +314,6 @@ hr.small {
 }
 
 
-
 /* Call to Action */
 
 .call-to-action {
@@ -323,6 +322,16 @@ hr.small {
 
 .call-to-action .btn {
   margin: 10px;
+}
+
+#email-form {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+#success_message {
+  display: none;
 }
 
 
