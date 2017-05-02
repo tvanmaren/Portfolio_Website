@@ -1,6 +1,6 @@
 # My Portfolio Website
 
-## Customized and refined from [Start Bootstrap](http://startbootstrap.com/)'s [Stylish Portfolio](http://startbootstrap.com/template-overviews/stylish-portfolio/)
+## Customized and refined from [Start Bootstrap's](http://startbootstrap.com/) [Stylish Portfolio](http://startbootstrap.com/template-overviews/stylish-portfolio/)
 
 ## Copyright and License
 
