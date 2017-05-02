@@ -109,7 +109,6 @@ $('#email-toggle').click((e) => {
 });
 // Email form functionality
 $('#contact_form').bootstrapValidator({
-    // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
     feedbackIcons: {
       valid: 'glyphicon glyphicon-ok',
       invalid: 'glyphicon glyphicon-remove',
@@ -146,24 +145,13 @@ $('#contact_form').bootstrapValidator({
           }
         }
       },
-      phone: {
-        validators: {
-          notEmpty: {
-            message: 'Please supply your phone number'
-          },
-          phone: {
-            country: 'US',
-            message: 'Please supply a vaild phone number with area code'
-          }
-        }
-      },
-      address: {
+      company: {
         validators: {
           stringLength: {
-            min: 8,
+            min: 2,
           },
           notEmpty: {
-            message: 'Please supply your street address'
+            message: 'Please supply your company name'
           }
         }
       },
@@ -181,17 +169,6 @@ $('#contact_form').bootstrapValidator({
         validators: {
           notEmpty: {
             message: 'Please select your state'
-          }
-        }
-      },
-      zip: {
-        validators: {
-          notEmpty: {
-            message: 'Please supply your zip code'
-          },
-          zipCode: {
-            country: 'US',
-            message: 'Please supply a vaild zip code'
           }
         }
       },
