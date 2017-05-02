@@ -135,7 +135,7 @@ $('#contact_form').bootstrapValidator({
           }
         }
       },
-      email: {
+      _replyto: {
         validators: {
           notEmpty: {
             message: 'Please supply your email address'
