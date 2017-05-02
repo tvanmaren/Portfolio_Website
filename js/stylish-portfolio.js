@@ -1,6 +1,8 @@
 'use strict';
 // enable tooltips
 $($('[data-toggle="tooltip"]').tooltip());
+// hide email form
+$($('#email-form').slideToggle(0));
 
 // Closes the sidebar menu
 $("#menu-close").click(function (e) {
@@ -93,19 +95,7 @@ $('#filter-options span a').click((e) => {
 $('#email-toggle').click((e) => {
   e.preventDefault();
   const $hiddenForm = $('#email-form');
-  if ($hiddenForm.css('display') === 'none') {
-    $hiddenForm.css({
-      'display': 'inline-block',
-      'height': 'auto',
-      'width': 'auto'
-    });
-  } else {
-    $hiddenForm.css({
-      'display': 'none',
-      'height': '0',
-      'width': '0'
-    });
-  }
+  $hiddenForm.slideToggle("slow");
 });
 // Email form functionality
 $('#contact_form').bootstrapValidator({
@@ -189,17 +179,17 @@ $('#contact_form').bootstrapValidator({
   .on('success.form.bv', function (e) {
     $('#success_message').slideDown({
       opacity: "show"
-    }, "slow") // Do something ...
+    }, "slow");
     $('#contact_form').data('bootstrapValidator').resetForm();
 
     // Prevent form submission
     e.preventDefault();
 
     // Get the form instance
-    var $form = $(e.target);
+    const $form = $(e.target);
 
     // Get the BootstrapValidator instance
-    var bv = $form.data('bootstrapValidator');
+    const bv = $form.data('bootstrapValidator');
 
     // Use Ajax to submit form data
     $.post($form.attr('action'), $form.serialize(), function (result) {

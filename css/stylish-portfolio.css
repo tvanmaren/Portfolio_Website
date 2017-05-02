@@ -325,9 +325,9 @@ hr.small {
 }
 
 #email-form {
-  display: none;
-  height: 0;
-  width: 0;
+  display: inline-block;
+  height: auto;
+  width: auto;
 }
 
 #success_message {
